@@ -13,3 +13,12 @@ spring:
 
 server:
   port: 9090
+
+user-config:
+  users:
+    - username: "user"
+      password: "{bcrypt}$2a$10$XvnX9n9vUZa9a8qLpXldSu/mv7Hyc/zTa2TiwddDYp9i6F2E94a6G" # hasło: "some_user"
+      role: "USER"
+    - username: "admin"
+      password: "{bcrypt}$2a$10$QjjZL.v0/o8f0k3IuO0sUu/v/Zh/Y9jxXnnTmV9y0gnSa2B.AGRnG" # hasło: "some_admin"
+      role: "ADMIN"
