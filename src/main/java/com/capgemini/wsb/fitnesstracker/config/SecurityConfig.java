@@ -27,6 +27,10 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/v1/users/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/v1/users/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/v1/users/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/v1/trainings/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/v1/trainings/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/v1/trainings/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/v1/trainings/**").hasRole("ADMIN")
                 )
                 .httpBasic(httpBasic -> {});
         return http.build();
